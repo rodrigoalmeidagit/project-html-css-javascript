@@ -1,0 +1,22 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Recursive', sans-serif;
+  text-decoration: none;
+}
+
+header {
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #383c42;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  
+}
