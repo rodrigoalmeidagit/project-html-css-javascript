@@ -27,9 +27,9 @@
       <section class="inputs-container">
         <input type="email" placeholder="example@e-mail.com">
         <div class="password-container">
-          <input type="password" id="field-password" class="field-password" placeholder="********">
-          <i class="fas fa-eye" id="eye"></i>
-          <i class="fas fa-eye-slash" id="eye-slash"></i>
+          <input type="password" id="field-password" data-js="input" class="field-password" placeholder="********">
+          <i class="fas fa-eye" data-js="eye-on" id="eye" onclick="showPassword()"></i>
+          <i class="fas fa-eye-slash" data-js="eye-off" id="eye-slash" onclick="showPassword()"></i>
         </div>
       </section>
 
@@ -41,7 +41,7 @@
         <a href="#">Esqueceu a senha?</a>
       </section>
 
-      <button type="button" id="btn-login">Login</button>
+      <button type="button" data-js="btn-login">Login</button>
 
       <section class="links-container">
         <span>Ou entre com:</span>
