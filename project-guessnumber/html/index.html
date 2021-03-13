@@ -18,17 +18,17 @@
 
     <main class="main-container">
 
-      <form>
-        <label for="kick">Digite um número (0-10):</label>
-        <input type="number" id="kick" min="0" max="10" placeholder="0">
+      <form data-js="form">
+        <label for="kick" >Digite um número (0-10):</label>
+        <input type="number" data-js="kick" id="kick" min="0" max="10" placeholder="0">
         <button type="submit">Jogar!</button>
       </form>
 
-      <section class="resultado" id="result">
-        <h2 id="status">Adivinhe o número sorteado!</h2>
-        <span id="attempt">tentativas: 0</span>
+      <section class="resultado" data-js="result">
+        <h2 data-js="status">Adivinhe o número sorteado!</h2>
+        <span data-js="attempt">Tentativas: 0</span>
       </section>
-      <button id="btn-start">Jogar de novo!</button>
+      <button id="btn-start" data-js="btn-start" onclick="restart()">Jogar de novo!</button>
       
     </main>
   
