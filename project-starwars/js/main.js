@@ -31,13 +31,20 @@ function getData( param ) {
 function loadPhrase() {
   const $button = document.querySelector('[data-js="btn-phrases"]');
   const $phrase = document.querySelector('[data-js="phrase"]');
-  console.log( $button, $phrase)
-  return fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+  
+  return fetch('https://allugofrases.herokuapp.com/frases/random')
         .then( data => data.json() )
-        .then( json => {
+        .then( json => {          
           console.log( json )
           $button.innerHTML = 'Ver mais uma frase!';
           $phrase.innerHTML = `"${ json.content }"`;
+
+          $phrase.animate([
+            { transform: 'translateY(-70px)' },
+            { transform: 'translateY(0px)' }
+          ], {
+            duration: 500
+          })
         })
-        .catch( err => console.log('Erro: ', err ) );
+        .catch( err => console.log('Erro: ', err ) );        
 }
